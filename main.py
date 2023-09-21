@@ -1,8 +1,10 @@
-def fact(n):
-   if(n==0):
-      return(1)
-   else:
-      return (n*fact(n-1))
-n=int(input("enter n value"))
-x=fact(n)
-print("x value",x)
+def get_indices(element, lst):
+    indices = []
+    for i in range(len(lst)):
+        if lst[i] == element:
+            indices.append(i)
+    return indices
+my_list = [3, 5, 2, 3, 8, 3, 1]
+element = 3
+indices = get_indices(element, my_list)
+print(indices)
